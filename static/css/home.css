@@ -31,7 +31,7 @@
   #homepage {
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-      /* "header header header header" */
+      "header header header header"
       "sidebar main main main"
       "footer footer footer footer";
   }
