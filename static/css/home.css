@@ -1,0 +1,49 @@
+@import "footer.css";
+@import "header.css";
+@import "sidebar.css";
+@import "main.css";
+
+#homepage {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:
+    150px minmax(300px, max-content) minmax(300px, max-content)
+    150px;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+}
+
+@media all and (min-width: 900px) and (max-width: 1249px) {
+  #homepage {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px minmax(300px, max-content) 150px;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+}
+
+@media all and (min-width: 1250px) {
+  #homepage {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      /* "header header header header" */
+      "sidebar main main main"
+      "footer footer footer footer";
+  }
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h3 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
